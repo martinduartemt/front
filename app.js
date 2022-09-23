@@ -1,23 +1,9 @@
-let x=14
-x=90
-var y = 20
-console.log(x+y)
-
-function sumTwoNumbers(){
-    return 4+5
-}
-
-function changeContent(){
-
-    document.getElementById("toChange").innerHTML="cambiado desde javascript"
-}
-
-function getCostumes(){
+function showQuadbike(){
     //elemento del DOM->document object model
     const $responseContainer=document.getElementById("response");
     // $responseContainer.innerHTML='texto agregado desde javascript';
     $.ajax({
-        url:"https://g389439032223da-bxtdn7v5dsb6tede.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/api/costumes",
+        url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -26,18 +12,15 @@ function getCostumes(){
             for(let x=0;x<response.items.length;x++){
                 const costume= response.items[x];
                 $responseContainer.innerHTML+=`
-                id:${costume.idcostume}
+                id1:${costume.id}
                 <br>
-                nombre:${costume.name} 
+                brand1:${costume.brand} 
                 <br>
-                descripción:${costume.description} 
+                model1:${costume.model} 
                 <br>
-                años:${costume.year} 
+                id_category1:${costume.category_id} 
                 <br>
-                marca:${costume.brand} 
-                <br>
-                categoría:${costume.idcategory}                
-                <br>
+                name1:${costume.name} 
                 <br>
                 `;
             }
@@ -48,17 +31,16 @@ function getCostumes(){
 function createCostume(){
     
     let dataToSend={
-        "idcostume": parseInt( $("#id").val()),
-        "name":$("#name").val(),
-        "brand":$("#brand").val(),
-        "year":parseInt($("#year").val()),
-        "description":$("#description").val(),
-        "idcategory": parseInt($("#idCategory").val())
+        "id": parseInt( $("#id1").val()),
+        "brand":$("#brand1").val(),
+        "model": parseInt($("#model1").val()),
+        "category_id":parseInt($("#id_category1").val()),
+        "name":$("#name1").val(),
     }
     dataToSend=JSON.stringify(dataToSend);   
 
     const settings = {
-        "url": "https://g389439032223da-bxtdn7v5dsb6tede.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/api/costumes",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
         "method": "POST",        
         "headers": {
           "Content-Type": "application/json"
@@ -76,17 +58,16 @@ function createCostume(){
 function updateCostume(){
     
     let dataToSend={
-        "idcostume": parseInt( $("#id").val()),
-        "name":$("#name").val(),
-        "brand":$("#brand").val(),
-        "year":parseInt($("#year").val()),
-        "description":$("#description").val(),
-        "idcategory": parseInt($("#idCategory").val())
+      "id": parseInt( $("#id1").val()),
+      "brand":$("#brand1").val(),
+      "model": parseInt($("#model1").val()),
+      "category_id":parseInt($("#id_category1").val()),
+      "name":$("#name1").val(),
     }
     dataToSend=JSON.stringify(dataToSend);   
 
     const settings = {
-        "url": "https://g389439032223da-bxtdn7v5dsb6tede.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/api/costumes",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
         "method": "PUT",        
         "headers": {
           "Content-Type": "application/json"
@@ -103,12 +84,12 @@ function updateCostume(){
 function deleteCostume(){
     
     let dataToSend={
-        "idcostume": parseInt( $("#id").val()),        
+        "id": parseInt( $("#id1").val()),        
     }
     dataToSend=JSON.stringify(dataToSend);   
 
     const settings = {
-        "url": "https://g389439032223da-bxtdn7v5dsb6tede.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/api/costumes",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
         "method": "DELETE",        
         "headers": {
           "Content-Type": "application/json"
@@ -122,6 +103,5 @@ function deleteCostume(){
 
 }
 
-console.log(sumTwoNumbers())
-changeContent()
-getCostumes()
+
+
