@@ -1,9 +1,9 @@
-function ahowClient(){
+function showClients(){
   //elemento del DOM->document object model
   const $responseContainer=document.getElementById("response");
   // $responseContainer.innerHTML='texto agregado desde javascript';
   $.ajax({
-      url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
+      url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       type:"GET",
       datatype:"JSON",
       success:function(response){
@@ -26,19 +26,18 @@ function ahowClient(){
   })
 }
 
-function createCostume(){
+function createCLient(){
   
   let dataToSend={
-      "id": parseInt( $("#id1").val()),
-      "brand":$("#brand1").val(),
-      "model": parseInt($("#model1").val()),
-      "category_id":parseInt($("#id_category1").val()),
-      "name":$("#name1").val(),
+      "id": parseInt( $("#id2").val()),
+      "name":$("#name2").val(),
+      "email": $("#email2").val(),
+      "age":parseInt($("#age2").val()),
   }
   dataToSend=JSON.stringify(dataToSend);   
 
   const settings = {
-      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
+      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       "method": "POST",        
       "headers": {
         "Content-Type": "application/json"
@@ -53,19 +52,18 @@ function createCostume(){
 
 }
 
-function updateCostume(){
+function updateCLient(){
   
   let dataToSend={
-    "id": parseInt( $("#id1").val()),
-    "brand":$("#brand1").val(),
-    "model": parseInt($("#model1").val()),
-    "category_id":parseInt($("#id_category1").val()),
-    "name":$("#name1").val(),
+    "id": parseInt( $("#id2").val()),
+    "name":$("#name2").val(),
+    "email": $("#email2").val(),
+    "age":parseInt($("#age2").val()),
   }
   dataToSend=JSON.stringify(dataToSend);   
 
   const settings = {
-      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
+      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       "method": "PUT",        
       "headers": {
         "Content-Type": "application/json"
@@ -79,15 +77,15 @@ function updateCostume(){
 
 }
 
-function deleteCostume(){
+function deleteCLient(){
   
   let dataToSend={
-      "id": parseInt( $("#id1").val()),        
+      "id": parseInt( $("#id2").val()),        
   }
   dataToSend=JSON.stringify(dataToSend);   
 
   const settings = {
-      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike",
+      "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       "method": "DELETE",        
       "headers": {
         "Content-Type": "application/json"
@@ -101,5 +99,5 @@ function deleteCostume(){
 
 }
 
-showCLient()
+
 
