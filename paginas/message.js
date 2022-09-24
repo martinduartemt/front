@@ -1,9 +1,9 @@
-function showClients(){
+function showMessage(){
     //elemento del DOM->document object model
     const $responseContainer=document.getElementById("response");
     // $responseContainer.innerHTML='texto agregado desde javascript';
     $.ajax({
-        url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+        url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/message/message",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -12,32 +12,27 @@ function showClients(){
             for(let x=0;x<response.items.length;x++){
                 const costume= response.items[x];
                 $responseContainer.innerHTML+=`
-                id2:${costume.id}
+                id :${costume.id}
                 <br>
-                name2:${costume.name} 
+                message :${costume.messagetext} 
                 <br>
-                email2:${costume.email} 
-                <br>
-                age2:${costume.age} 
-                <br>
+                
                 `;
             }
         }
     })
   }
   
-  function createCLient(){
+  function createMessage(){
     
     let dataToSend={
-        "id": parseInt( $("#id2").val()),
-        "name":$("#name2").val(),
-        "email": $("#email2").val(),
-        "age":parseInt($("#age2").val()),
+        "id": parseInt( $("#id3").val()),
+        "messagetext":$("#message1").val(),
     }
     dataToSend=JSON.stringify(dataToSend);   
   
     const settings = {
-        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/message/message",
         "method": "POST",        
         "headers": {
           "Content-Type": "application/json"
@@ -52,18 +47,16 @@ function showClients(){
   
   }
   
-  function updateCLient(){
+  function updateMessage(){
     
     let dataToSend={
-      "id": parseInt( $("#id2").val()),
-      "name":$("#name2").val(),
-      "email": $("#email2").val(),
-      "age":parseInt($("#age2").val()),
+      "id": parseInt( $("#id3").val()),
+      "messagetext":$("#message1").val(),
     }
     dataToSend=JSON.stringify(dataToSend);   
   
     const settings = {
-        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/message/message",
         "method": "PUT",        
         "headers": {
           "Content-Type": "application/json"
@@ -77,15 +70,15 @@ function showClients(){
   
   }
   
-  function deleteCLient(){
+  function deleteMessage(){
     
     let dataToSend={
-        "id": parseInt( $("#id2").val()),        
+        "id": parseInt( $("#id3").val()),        
     }
     dataToSend=JSON.stringify(dataToSend);   
   
     const settings = {
-        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+        "url": "https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/message/message",
         "method": "DELETE",        
         "headers": {
           "Content-Type": "application/json"
