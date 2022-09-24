@@ -1,4 +1,4 @@
-function showQuadbike(){
+function ahowClient(){
   //elemento del DOM->document object model
   const $responseContainer=document.getElementById("response");
   // $responseContainer.innerHTML='texto agregado desde javascript';
@@ -12,15 +12,13 @@ function showQuadbike(){
           for(let x=0;x<response.items.length;x++){
               const costume= response.items[x];
               $responseContainer.innerHTML+=`
-              id1:${costume.id}
+              id2:${costume.id}
               <br>
-              brand1:${costume.brand} 
+              name2:${costume.name} 
               <br>
-              model1:${costume.model} 
+              email2:${costume.email} 
               <br>
-              id_category1:${costume.category_id} 
-              <br>
-              name1:${costume.name} 
+              age2:${costume.age} 
               <br>
               `;
           }
@@ -103,5 +101,5 @@ function deleteCostume(){
 
 }
 
-
+showCLient()
 
