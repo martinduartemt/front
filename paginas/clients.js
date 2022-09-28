@@ -12,19 +12,52 @@ function showClients(){
           for(let x=0;x<response.items.length;x++){
               const costume= response.items[x];
               $responseContainer.innerHTML+=`
-              id2:${costume.id}
+              id:${costume.id}
               <br>
-              name2:${costume.name} 
+              name:${costume.name} 
               <br>
-              email2:${costume.email} 
+              email:${costume.email} 
               <br>
-              age2:${costume.age} 
+              age:${costume.age} 
               <br>
               `;
           }
       }
   })
 }
+
+function showClient(){
+  const id = parseInt( $("#id2").val())
+  
+  //elemento del DOM->document object model
+  const $responseContainer=document.getElementById("response");
+  // $responseContainer.innerHTML='texto agregado desde javascript';
+  $.ajax({
+      url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client/"+id,
+      type:"GET",
+      datatype:"JSON",
+      success:function(response){
+          console.log(response)
+          console.log(response.items)
+          for(let x=0;x<response.items.length;x++){
+              const costume= response.items[x];
+              $responseContainer.innerHTML+=`
+              cliente 
+              id:${costume.id}
+              <br>
+              name:${costume.name} 
+              <br>
+              email:${costume.email} 
+              <br>
+              age:${costume.age} 
+              <br>
+              `;
+          }
+      }
+  })
+}
+
+
 
 function createCLient(){
   

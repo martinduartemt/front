@@ -22,6 +22,31 @@ function showMessage(){
         }
     })
   }
+
+  function showMessage(){
+    const id = parseInt( $("#id3").val())
+    
+    const $responseContainer=document.getElementById("response");
+    $.ajax({
+        url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/message/message/"+id,
+        type:"GET",
+        datatype:"JSON",
+        success:function(response){
+            console.log(response)
+            console.log(response.items)
+            for(let x=0;x<response.items.length;x++){
+                const costume= response.items[x];
+                $responseContainer.innerHTML+=`
+                cliente 
+                id:${costume.id}
+                <br>
+                name:${costume.messagetext} 
+                <br>
+                `;
+            }
+        }
+    })
+  }
   
   function createMessage(){
     

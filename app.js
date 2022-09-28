@@ -1,4 +1,4 @@
-function showQuadbike(){
+function showQuadbikes(){
     //elemento del DOM->document object model
     const $responseContainer=document.getElementById("response");
     // $responseContainer.innerHTML='texto agregado desde javascript';
@@ -26,6 +26,38 @@ function showQuadbike(){
             }
         }
     })
+}
+
+function showQuadbike(){
+  const id = parseInt( $("#id1").val())
+  
+  //elemento del DOM->document object model
+  const $responseContainer=document.getElementById("response");
+  // $responseContainer.innerHTML='texto agregado desde javascript';
+  $.ajax({
+      url:"https://ga6ae41cae65926-vogwkjxu2344xt5x.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/quadbike/quadbike/"+id,
+      type:"GET",
+      datatype:"JSON",
+      success:function(response){
+          console.log(response)
+          console.log(response.items)
+          for(let x=0;x<response.items.length;x++){
+              const costume= response.items[x];
+              $responseContainer.innerHTML+=`
+              id1:${costume.id}
+              <br>
+              brand1:${costume.brand} 
+              <br>
+              model1:${costume.model} 
+              <br>
+              id_category1:${costume.category_id} 
+              <br>
+              name1:${costume.name} 
+              <br>
+              `;
+          }
+      }
+  })
 }
 
 function createCostume(){
