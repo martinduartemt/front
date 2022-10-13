@@ -1,39 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
-    <link rel="stylesheet" href="app.css">
-    
-</head>
-<body>
-    <h1>CUATRIMOTOS</h1>
-    <ul id="menu">
-        <li><a href="">cuatrimotos</a> </li>
-        <li><a href="/paginas/clients.html">clientes</a> </li>
-        <li><a href="/paginas/messages.html">mensajes</a> </li>
-    </ul>
-    <h2>Registro de cuatrimoto</h2>
-    <div id="formContainer">
-        <input type="text" placeholder="ingrese el id " id="id1" />
-        <input type="text" placeholder="ingrese la marca de la moto" id="brand1" />
-        <input type="text" placeholder="ingrese el modelo" id="model1" />
-        <input type="text" placeholder="ingrese la categoria" id="id_category1" />
-        <input type="text" placeholder="ingrese nombre de el propietario" id="name1" />
-        <button onclick="createCostume()">Enviar</button>
-        <button onclick="updateCostume()">Actualizar</button>
-        <button onclick="deleteCostume()">Borrar</button>
-        <button onclick="showQuadbike()">Mostar</button>
-        <button onclick="showQuadbikes()">Mostar todo</button>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="scrollmenu">
+      <a href="">cuatrimotos</a>
+      <a href="/paginas/clients.html">clientes</a>
+      <a href="/paginas/messages.html">mensajes</a>
+      <a href="#about">About</a>
     </div>
-    
+    <h1>CUATRIMOTOS</h1>
 
-    
-    
-    <div id="response"></div>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>    
+    <form>
+      <div class="container">
+        <h1>Registro de cuatrimotos</h1>
+        <p>Ingrese los datos requeridos.</p>
+        
+        <label for="Id"><b>Id</b></label>
+        <input
+          type="text"
+          placeholder=""
+          id="id"
+          readonly
+        />
+
+        <label for="name"><b>Nombre</b></label>
+        <input
+          type="text" 
+          placeholder="Ingrese el nombre" 
+          id="name"
+          required
+        />
+
+        <label for="brand"><b>Marca</b></label>
+        <input
+          type="text"
+          placeholder="Ingrese el Nombre" id="brand"
+          required
+        />
+
+        <label for="Year"><b>Año</b></label>
+        <input type="text" placeholder="Igrese el Año" id="year" required />
+
+        <label for="description"><b>Descipcion</b></label>
+        <input
+          type="text"
+          placeholder="Ingrese una Descipcion" id="description"
+          required
+        />
+        <label for="Category"><b>Categoria</b></label>
+        <input
+          type="text" placeholder="Ingrese la Categoria"id="category"
+          required
+        />
+
+        <hr />
+
+        <button type="botton" class="agregarbtn" onclick="createQuadbike()" >Agregar</button>
+        <button type="botton" class="updatebtn" onclick="updateQuadbike()" >Actualizar</button>
+      </div>
+    </form>
+
+    <h2>cuatrimotos disponibles en la aplicacion</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Nombre</td>
+          <td>Marca</td>
+          <td>Año</td>
+          <td>Descipcion</td>
+          <td>Category</td>
+        </tr>
+      </thead>
+      <tbody id="response"></tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

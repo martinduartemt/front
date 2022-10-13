@@ -1,28 +1,123 @@
+
+/* visual para el menu */
+div.scrollmenu {
+  background-color: rgb(48, 11, 61);
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: rgb(215, 177, 245);
+}
+/* titulos */
 body {
   text-align: center;
 }
 
-#formContainer {
-  margin: auto;
-  width: 80%;
+
+
+/* registro de formulario */
+
+/* Add padding to containers */
+.container {
+  padding-top:15x;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.agregarbtn,.updatebtn {
+  background-color: #bf77e9;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.updatebtn {
+  background-color: #867feb;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.agregarbtn:hover {
+  opacity: 1;
+}
+
+
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
   text-align: center;
 }
 
-input {
-  display: block;
-  margin: auto;
+
+
+/* table */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
 }
 
-button {
-  margin: auto;
-  display: block;
-}
-
-#menu{
+th, td {
   text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 
 }
-  
-  
 
-
+* {
+  box-sizing: border-box;
+}
