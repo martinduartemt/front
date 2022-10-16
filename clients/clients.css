@@ -1,0 +1,197 @@
+
+.allContainer{
+  padding-top:15px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: rgb(179, 160, 182);
+}
+/* visual para el menu */
+a.qua{
+  background-color:rgb(82, 36, 97); ;
+
+}
+
+div.scrollmenu {
+  background-color: rgb(48, 11, 61);
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+div.scrollmenu a:hover {
+  background-color: rgb(215, 177, 245);
+  transform: scale(1.5);
+}
+/* titulos */
+body {
+  text-align: center;
+}
+
+
+
+/* registro de formulario */
+
+/* Add padding to containers */
+.container {
+  padding-top:15x;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+/* Full-width input fields */
+input[type=password],
+input[type=text],
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.agregarbtn {
+  background-color: #bf77e9;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.agregarbtn:hover {
+  opacity: 1;
+}
+
+.updatebtn {
+  background-color: #e1d462;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.updatebtn:hover{
+  opacity: 1;
+}
+
+
+
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+
+/* table */
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* table */
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color:  rgb(48, 11, 61);
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.del {
+  background-color: #ea5c5c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.del:hover {
+  opacity: 1;
+}
+
+.act {
+  background-color: #e1d462;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.act:hover {
+  opacity: 1;
+}

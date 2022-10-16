@@ -1,5 +1,16 @@
 
+.allContainer{
+  padding-top:15px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: rgb(179, 160, 182);
+}
 /* visual para el menu */
+a.qua{
+  background-color:rgb(82, 36, 97); ;
+
+}
+
 div.scrollmenu {
   background-color: rgb(48, 11, 61);
   overflow: auto;
@@ -12,10 +23,12 @@ div.scrollmenu a {
   text-align: center;
   padding: 14px;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 div.scrollmenu a:hover {
   background-color: rgb(215, 177, 245);
+  transform: scale(1.5);
 }
 /* titulos */
 body {
@@ -59,7 +72,7 @@ hr {
 }
 
 /* Set a style for the submit button */
-.agregarbtn,.updatebtn {
+.agregarbtn {
   background-color: #bf77e9;
   color: white;
   padding: 16px 20px;
@@ -69,8 +82,12 @@ hr {
   width: 100%;
   opacity: 0.9;
 }
+.agregarbtn:hover {
+  opacity: 1;
+}
+
 .updatebtn {
-  background-color: #867feb;
+  background-color: #e1d462;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -79,10 +96,10 @@ hr {
   width: 100%;
   opacity: 0.9;
 }
-
-.agregarbtn:hover {
+.updatebtn:hover{
   opacity: 1;
 }
+
 
 
 
@@ -98,6 +115,7 @@ hr {
 /* table */
 
 table {
+  background-color: white;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -107,6 +125,11 @@ table {
 th, td {
   text-align: left;
   padding: 16px;
+  opacity: 0.9;
+}
+
+td:hover{
+  opacity: 1;
 }
 
 tr:nth-child(even) {
@@ -120,4 +143,32 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.del {
+  background-color: #ea5c5c;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.del:hover {
+  opacity: 1;
+}
+
+.act {
+  background-color: #e1d462;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.act:hover {
+  opacity: 1;
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="clients.css" />
+  </head>
+  <body class="allContainer">
+    <div class="scrollmenu">
+      <a href="/category/category.html">Categorias</a>
+      <a  href="/quadbikes/quadbike.html">Cuatrimotos</a>
+      <a class="qua" href="">Clientes</a>
+      <a href="/reports/reports.html">Reportes</a>
+
+    </div>
+    <h1>Clientes</h1>
+
+    <form>
+      <div class="container">
+        <h1>Registro de cuatrimotos</h1>
+        <p>Ingrese los datos requeridos.</p>
+        
+        <label for="Id"><b>Id</b></label>
+        <input
+          type="text"
+          placeholder=""
+          id="id"
+          readonly
+        />
+
+        <label for="name"><b>Nombre</b></label>
+        <input
+          type="text" 
+          placeholder="Ingrese el Nombre" 
+          id="name"
+          required
+        />
+
+        <label for="age"><b>Ingrese la edad</b></label>
+        <input type="number" placeholder="Igrese la edad" id="age" required />
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Ingrese el email" id="email"
+          required
+        />
+
+     
+        <label for="password"><b>Contraseña</b></label>
+        <input
+          type="password"
+          placeholder="Ingrese la contraseña" id="password"
+          required
+        />
+        
+        <hr />
+
+        <button type="botton" class="agregarbtn" onclick="createClient()" >Agregar</button>
+        <button type="botton" class="updatebtn" onclick="updateClient()" >Actualizar</button>
+      </div>
+    </form>
+
+    <h2>clientes disponibles </h2>
+
+    <div id="response"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/clients/clients.js"></script>
+  </body>
+</html>

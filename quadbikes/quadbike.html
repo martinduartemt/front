@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="quadbikes.css" />
   </head>
-  <body>
+  <body class="allContainer">
     <div class="scrollmenu">
-      <a href="">cuatrimotos</a>
-      <a href="/paginas/clients.html">clientes</a>
-      <a href="/paginas/messages.html">mensajes</a>
-      <a href="#about">About</a>
+      <a href="/category/category.html">Categorias</a>
+      <a class="qua" href="">Cuatrimotos</a>
+      <a href="/clients/clients.html">Clientes</a>
+      <a href="/reports/reports.html">Reportes</a>
     </div>
     <h1>CUATRIMOTOS</h1>
 
@@ -33,7 +33,7 @@
         <label for="name"><b>Nombre</b></label>
         <input
           type="text" 
-          placeholder="Ingrese el nombre" 
+          placeholder="Ingrese el Nombre" 
           id="name"
           required
         />
@@ -41,12 +41,12 @@
         <label for="brand"><b>Marca</b></label>
         <input
           type="text"
-          placeholder="Ingrese el Nombre" id="brand"
+          placeholder="Ingrese la Marca" id="brand"
           required
         />
 
-        <label for="Year"><b>Año</b></label>
-        <input type="text" placeholder="Igrese el Año" id="year" required />
+        <label for="year"><b>Año</b></label>
+        <input type="number" placeholder="Igrese el Año" id="year" required />
 
         <label for="description"><b>Descipcion</b></label>
         <input
@@ -56,7 +56,7 @@
         />
         <label for="Category"><b>Categoria</b></label>
         <input
-          type="text" placeholder="Ingrese la Categoria"id="category"
+          type="number" placeholder="Ingrese una Categoria existente"id="category"
           required
         />
 
@@ -67,17 +67,16 @@
       </div>
     </form>
 
-    <h2>cuatrimotos disponibles en la aplicacion</h2>
+    <h2>cuatrimotos disponibles </h2>
 
     <table>
       <thead>
         <tr>
           <td>Id</td>
           <td>Nombre</td>
+          <td>Descripción</td>
           <td>Marca</td>
           <td>Año</td>
-          <td>Descipcion</td>
-          <td>Category</td>
         </tr>
       </thead>
       <tbody id="response"></tbody>
@@ -88,6 +87,6 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script src="quadbikes.js"></script>
   </body>
 </html>

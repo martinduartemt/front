@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="category.css" />
+  </head>
+  <body class="allContainer">
+    <div class="scrollmenu">
+      <a class="cat" href="">Categorias</a>
+      <a href="/quadbikes/quadbike.html">Cuatrimotos</a>
+      <a href="/clients/clients.html">Clientes</a>
+      <a href="/reports/reports.html">Reportes</a>
+    </div>
+    <h1>CATEGORIAS</h1>
+
+    <form>
+      <div class="container">
+        <h1>Registro de categorias</h1>
+        <p>Ingrese los datos requeridos.</p>
+
+        <label for="Id"><b>Id</b></label>
+        <input type="text" placeholder="" id="id" readonly />
+
+        <label for="name"><b>Nombre</b></label>
+        <input type="text" placeholder="Ingrese el Nombre" id="name" required />
+
+        <label for="description"><b>Descripcion</b></label>
+        <input type="text" placeholder="Ingrese la Descipcion" id="description" required />
+
+
+        <hr />
+
+        <button type="botton" class="agregarbtn" onclick="createCategory()">
+          Agregar
+        </button>
+        <button type="botton" class="updatebtn" onclick="updateCategory()">
+          Actualizar
+        </button>
+      </div>
+    </form>
+
+    <h2>Lista de categorias</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Nombre</td>
+          <td>Descripción</td>
+        </tr>
+      </thead>
+      <tbody id="response"></tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="category.js"></script>
+  </body>
+</html>
