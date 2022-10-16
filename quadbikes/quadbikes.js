@@ -1,11 +1,11 @@
-const API_URL = "http://localhost:8081/api/";
+const API_URL = "http://129.146.80.179:8080/api/";
 
 function showQuadbikes() {
   $.ajax({
     url: `${API_URL}Quadbike/all`,
     type: "GET",
     datatype: "JSON",
-    success: renderQuadbike()
+    success: renderQuadbike,
   })
 }
 function renderQuadbike(response) {
@@ -31,7 +31,7 @@ function renderQuadbike(response) {
         ${row.year}
     </td>
     <td>
-        <button class="act" onclick="renderQuadbikeToUpdate(${row.id},'${row.name}','${row.description}','${row.brand}',${row.year},${row.category?.id})" tyle>Actualizar</button>
+        <button class="act" onclick="renderQuadbikeToUpdate(${row.id},'${row.name}','${row.description}','${row.brand}',${row.year},${row.category.id})" tyle>Actualizar</button>
     </td>
     <td>
         <button class="del" onclick="deleteQuadbike(${row.id})">Eliminar</button>

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8081/api/";
+const API_URL = "http://129.146.80.179:8080/api/";
 
 function showCategories() {
   $.ajax({
